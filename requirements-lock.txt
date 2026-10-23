@@ -1,0 +1,4 @@
+# 实测通过的精确版本（复现环境 / 排查用）
+# 验证方式：Python 3.13.12 (64-bit) + 本文件版本执行 run_pipeline.py --reuse 出报告成功
+playwright==1.64.0
+openpyxl==3.1.5

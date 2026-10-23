@@ -4,7 +4,18 @@
 
 抓取微信读书公开的分类页与榜单页，筛掉低分与下架书、合并同书的不同版本，输出一份**单文件 HTML 报告**（全部 / 三大榜单 / 各大类一键切换）和一份 **Excel 清单**。一次实测产出：1716 本、22 个大类、3 个榜单。
 
+原生支持 **Agent Skill** 协议：装进 WorkBuddy、Claude Code 等客户端后，说一句「体验卡能读哪些书」就能跑完全程。
+
+![version](https://img.shields.io/badge/version-v1.0.0-blue)
+![license](https://img.shields.io/badge/license-MIT-green)
+![python](https://img.shields.io/badge/python-3.10%2B-brightgreen)
+![playwright](https://img.shields.io/badge/playwright-1.40%2B-orange)
+
 ![报告首页](assets/overview.png)
+
+> **同系列技能**：如果你想解决的是「我书架上这些书该买哪些、书币怎么花、哪些快下架」，
+> 用 [weread-buybooks](https://github.com/C-s-salute/weread-buybooks)；
+> 它管你的书架，本技能管**全平台有哪些书用体验卡就能免费读**。两者数据源不同，可以配合使用。
 
 ## 解决什么问题
 
@@ -87,7 +98,7 @@ Release 包与仓库内容一致，只是免去 clone；升级时覆盖解压即
 
 **第 3 步：按提示授权并确认**
 
-WorkBuddy 会把目录复制/安装到用户级 skill 目录（本机为 `~/.trae-cn/skills/`），必要时请求文件访问权限；安装完成后让它列出 skill 名称核对。
+WorkBuddy 会把目录复制到用户级 skill 目录（`~/.workbuddy/skills/`，Windows 下即 `C:\Users\<你的用户名>\.workbuddy\skills\`），必要时请求文件访问权限；安装完成后让它列出 skill 名称核对。
 
 **第 4 步：直接用自然语言触发**
 
@@ -141,7 +152,9 @@ weread-trial-card-list/
 ├── SKILL.md                 # Agent skill 说明：触发词、流程、口径、验收
 ├── README.md                # 本文件
 ├── LICENSE                  # MIT
-├── requirements.txt         # playwright、openpyxl
+├── requirements.txt         # 依赖下限：playwright、openpyxl
+├── requirements-lock.txt    # 实测通过的精确版本
+├── .gitattributes           # 统一换行符，避免 Windows 假 diff
 ├── .gitignore               # 排除登录态、缓存、报告产物
 ├── assets/                  # README 用的报告截图
 ├── references/
