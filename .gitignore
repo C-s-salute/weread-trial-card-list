@@ -1,0 +1,27 @@
+# 登录态 / 抓取数据 / 报告产物：一律不提交
+.weread-trial-card-list/
+profile/
+data/
+_discover_pool.json
+_book_extra.json
+_book_read.json
+*.xlsx
+*体验卡*.html
+fire_bg.jpg
+
+# 本地环境
+.venv/
+venv/
+.env
+.env.*
+*.local
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
